@@ -126,9 +126,12 @@ a, a:link, a:visited, a:active {
         border-right: none;
     }
 
+    #contato {
+        width: 100%;
+    }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 
     #news article {
         width: 100%;
@@ -136,6 +139,16 @@ a, a:link, a:visited, a:active {
 
     #news article:nth-child(2) {
         border: none;
+    }
+
+    #contato label {
+        width: 100%;
+        text-align: left;
+    }
+    
+    #contato input, textarea     {
+        width: 100%;
+        margin-bottom: 5px;
     }
 
 }
