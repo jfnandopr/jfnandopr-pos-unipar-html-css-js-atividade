@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo HTML5, CSS3</title>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header id="page-header">
         <h1>Exemplo uso HTML5, CSS3</h1>
     </header>
-    <nav>
-        <a href="index.html">Inicial</a>
-        <a href="contato.html">Contato</a>
+    <nav id="main-menu" class="fundo-gradiente">
+        <a href="index.html" class="link">Inicial</a>
+        <a href="contato.html" class="link">Contato</a>
     </nav>
     <main>
-        <div>
+        <div id="news">
             <article>
                 <img src="img/contato.png">
                 <h2>Assunto 1</h2>
@@ -54,7 +56,7 @@
             </article>
         </div>
     </main>
-    <footer>
+    <footer id="page-footer" class="fundo-gradiente">
         <div>Jemerson Fernando Maia</div>
         <div>
             <strong>Pós-Graduação em Desenvolvimento de Aplicações Web e Mobile</strong>
