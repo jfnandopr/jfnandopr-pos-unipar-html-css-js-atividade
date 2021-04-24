@@ -22,7 +22,6 @@ $(document).ready(function (){
                 json += ",";
             
             json += `"${name}": "${ value.trim() }"`;
-            console.log(json);
         });
         json = `{${json}}`;
         return JSON.parse(json);
@@ -33,10 +32,34 @@ $(document).ready(function (){
         var tr = $("<tr></tr>");
         var tdTitulo = $("<td></td>");
         var tdIntroducao = $("<td></td>");
+        var tdAcoes = $("<td></td>");
         tdTitulo.text(noticiajson['titulo']);
         tdIntroducao.text(noticiajson['introducao']);
-        tr.append(tdTitulo, tdIntroducao);
+
+        var remover = $('<a href="#"></a>');
+        remover.html('<i class="bi-trash"></i> Remover');
+        remover.addClass("btn btn-sm btn-danger");
+        tdAcoes.append(remover);
+
+        remover.on("click", function(){
+            removeRow(tr);
+        });
+
+        tr.append(tdTitulo, tdIntroducao, tdAcoes);
         tbody.append(tr);
+
+        showRowCount();
+    }
+
+    function removeRow(tr){
+        tr.remove();
+        showRowCount();
+    }
+
+    function showRowCount(){
+        var trs = $("#table-noticias tbody tr");
+        var total = trs.length;
+        $("#table-noticias tfoot tr td span").text(total);
     }
 
 });
